@@ -3,8 +3,7 @@ import path from 'node:path'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
-// @ts-expect-error
-export const config: WebdriverIO.Config = {
+export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     //
     // ====================
     // Runner Configuration
@@ -110,7 +109,7 @@ export const config: WebdriverIO.Config = {
     reporters: ['spec'],
     //
     // Options to be passed to Jasmine.
-    jasmineNodeOpts: {
+    jasmineOpts: {
         // Jasmine default timeout
         defaultTimeoutInterval: 60000,
         //
@@ -199,7 +198,6 @@ export const config: WebdriverIO.Config = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
-
 
     /**
      * Hook that gets executed after the suite has ended

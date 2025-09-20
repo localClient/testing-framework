@@ -1,6 +1,5 @@
 import { config as sharedConfig } from './wdio.shared.conf.js'
 
-// @ts-expect-error
 export const config: WebdriverIO.Config = {
     ...sharedConfig,
     ...{
@@ -9,10 +8,10 @@ export const config: WebdriverIO.Config = {
         region: 'us',
         services: ['sauce'],
         capabilities: [{
-            maxInstances: 5,
             browserName: 'firefox',
             browserVersion: 'latest',
             platformName: 'Windows 10',
+            'wdio:maxInstances': 5,
             'sauce:options': {
                 build: `Build ${Math.ceil(Date.now() / 1000)}`
             }
