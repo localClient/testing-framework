@@ -5,7 +5,7 @@ Boilerplate project to run WebdriverIO tests with Jasmine using latest ES2016 fe
 
 __Note:__ the current boilerplate uses an alpha version of the new WebdriverIO `v8` version. As this version is not stable yet there might be some bugs. Checkout the [`v7`](https://github.com/webdriverio/jasmine-boilerplate/tree/v7) branch to see a version using a stable version.
 
-## Quick Start
+## Quick Start Guide
 
 Choose one of the following options:
 
